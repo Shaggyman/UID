@@ -9,9 +9,8 @@ body {
 
 /*HEADER*/
 header {
-    background-image: url("../photos/cover.jpg"); /*TODO*/
-    background-position: 0px -620px;
-    background-repeat: no-repeat;
+    /*TODO*/
+    background: url("../photos/cover.jpg") no-repeat 0 -620px;
     background-size: cover;
     width: 100%;
     font-family: 'Khula', serif; /*TODO*/
@@ -63,7 +62,7 @@ ul#top {
 
 .top {
     display: inline;
-    padding-left: 0.5em;
+    padding-left: 0.1em;
 }
 
 /*Schriftart Header*/
@@ -75,10 +74,10 @@ span {
 
 /*MAIN*/
 main {
-    background-color: #FFFFF1;
-    font-family: 'Gentium Basic';
+    background-color: #f6f6f6;
+    font-family: 'Gentium Basic', serif;
     font-size: 1.2em;
-    margin: 6em;
+    margin: 6em 6em 2em;
     padding: 2em;
     text-align: left;
 }
@@ -93,8 +92,6 @@ h2 {
 .text-box {
 }
 
-
-/*INDEX*/
 #sidebar-right {
     padding: 0.5em 0.5em 0.5em 2em;
     margin-left: 2em;
@@ -104,8 +101,40 @@ h2 {
     margin-bottom: 2em;
 }
 
+#group {
+    width: 45%;
+    max-height: 30% ;
+}
+
 .square {
     list-style-type:square;
+}
+
+/*RULES*/
+
+div#textwrapper {
+    margin-left: 16em;
+    padding-right: 3em;
+}
+
+.sidebar {
+    color: black;
+    position: fixed;
+}
+
+/*HISTORY*/
+
+#arrow {
+    float: left;
+}
+
+.arrow-bar {
+    list-style: none;
+}
+
+.years {
+    text-align: center;
+    font-size: 5em;
 }
 
 /*IMPRESSUM*/
@@ -116,20 +145,10 @@ h2 {
     Padding-right: 2em;
 }
 
-/*RULES*/
-
-div#textwrapper {
-    margin-left: 16em;
-}
-
-.sidebar {
-    color: black;
-}
-
 /*FOOTER*/
 footer {
     color: white;
-    font-family: 'Khula';
+    font-family: 'Khula', serif;
     text-align: center;
     background-color: #133253;
     padding-bottom: 1em;
@@ -161,32 +180,6 @@ a {
 .textgrey {
     color: grey;
 }
-
-/* Gray Scale aus http://codepen.io/nxworld/pen/ZYNOBZ*/
-figure {
-    width: auto;
-    height: auto;
-    max-width: 30%;
-    padding: 0;
-    background: #fff;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
-}
-figure:hover {
-    bottom: -36px;
-    opacity: 1;
-}
-
-.zoom img {
-    max-width: 100%;
-    max-height: 100% ;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-}
-.zoom figure:hover img {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
+.black {
+    color: black;
 }
