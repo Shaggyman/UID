@@ -1,5 +1,6 @@
 body {
-    background: #4A6B8A; /*TODO*/
+    background: #19589A;
+    font-family: 'PT Sans', 'Arial Black', sans-serif;
     margin: 0;
     padding: 0;
     -ms-hyphens: auto; /*Hyphens: Texte werden sinvoll ge-teilt*/
@@ -9,15 +10,15 @@ body {
 
 /*HEADER*/
 header {
-    /*TODO*/
-    background: url("../photos/cover.jpg") no-repeat 0 -620px;
+    background-color: #0E437A;
     background-size: cover;
     width: 100%;
-    font-family: 'Khula', serif; /*TODO*/
+    font-family: 'Indie Flower', cursive;
     opacity: 0.95;
     position: fixed;
     top: 0;
     z-index: 100;
+    color: #5987B7;
 }
 
 div.logo {
@@ -28,7 +29,6 @@ div.logo {
 
 img.logo {
     transform: rotate(-8deg);
-    float: left;
     padding-right: 0.3em;
     padding-bottom: 0.1em;
 }
@@ -36,10 +36,9 @@ img.logo {
 a.logo {
     padding-left: 0.5em;
     padding-top: 0.3em;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 2px #000, 2px -2px 2px #000, -2px 2px 2px #000, -2px -2px 2px #000;
+    font-size: 200%;
     float: left;
-    color: #FFFFF1;
+    color: #f6f6f6;;
     font-family: 'Indie Flower', cursive;
     overflow: visible;
 }
@@ -65,26 +64,20 @@ ul#top {
     padding-left: 0.1em;
 }
 
-/*Schriftart Header*/
-span {
-    font-family: 'Lobster', cursive;
-    text-shadow: 2px 2px 2px #000, 2px -2px 2px #000, -2px 2px 2px #000, -2px -2px 2px #000;
-    color: #A4B7CA;
-}
-
 /*MAIN*/
 main {
     background-color: #f6f6f6;
-    font-family: 'Gentium Basic', serif;
-    font-size: 1.2em;
-    margin: 6em 6em 2em;
+    font-size: 1em;
+    margin: 6em 6em 0em;
     padding: 2em;
     text-align: left;
 }
 
 h2 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Indie Flower', cursive;
+    /*font-family: 'Cinzel', serif;*/
     margin-top: 0;
+    font-size: 2em;
 }
 
 /*INDEX*/
@@ -120,6 +113,7 @@ div#textwrapper {
 .sidebar {
     color: black;
     position: fixed;
+    float: left;
 }
 
 /*HISTORY*/
@@ -148,32 +142,34 @@ div#textwrapper {
 /*FOOTER*/
 footer {
     color: white;
-    font-family: 'Khula', serif;
+    font-family: 'Indie Flower', cursive;
+    background-color: #063260;
+    padding-bottom: 1.5em;
     text-align: center;
-    background-color: #133253;
-    padding-bottom: 1em;
-    padding-top: 1em;
-}
-
-ul#bot {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 1em;
 }
 
 .bot {
-    display: inline;
+    color: #FFBF00;
 }
 
-ul#bot a {
-    color: #FFBF00;
-    text-decoration: none;
+#logo-footer {
+    float: right;
+    margin-right: 9%;
 }
+
+figcaption {
+    display: block;
+}
+
+#to-top {
+    font-size: 4em;
+    float: left;
+    padding-left: 2em;
+}
+
 
 /*STUFF*/
 a {
-    color: white;
     text-decoration: none;
 }
 
@@ -182,4 +178,11 @@ a {
 }
 .black {
     color: black;
+}
+
+.white {
+    color: #f6f6f6;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border: 0.2em solid white;
 }
