@@ -1,8 +1,10 @@
+/*http://codepen.io/HaukeSchultz/pen/YPwJYJ*/
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
+
 .myButton {
     position: relative;
     display: inline-block;
@@ -20,31 +22,63 @@
     display: block;
 }
 .myButton input + span:before {
-    content: "show";
-    font-size: 20px;
+    color: #f6f6f6;
+    content: "Vorschau";
+    font-size: 1.2em;
     vertical-align: middle;
-    position: absolute;
     display: inline-block;
-    background: #666;
-    width: auto;
+    background: #19589A;
     height: 30px;
+    width: auto;
     line-height: 30px;
     text-align: center;
-    -webkit-border-radius: 5px;
-    -webkit-background-clip: padding-box;
-    -moz-border-radius: 5px;
-    -moz-background-clip: padding;
-    border-radius: 5px;
+    border-radius: 2px;
     background-clip: padding-box;
-    border: 1px solid #444;
-    left: 0;
-    top: 0;
     cursor: pointer;
     padding: 0 20px;
 }
 .myButton input:checked + span:before {
-    content: "ausblenden";
+    content: "Ausblenden";
 }
 .myButton input:checked + span span {
+    display: block;
+}
+
+
+.myButton2 {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+    min-height: 30px;
+}
+.myButton2 input {
+    display: none;
+}
+.myButton2 span span {
+    display: none;
+}
+.myButton2 span span a {
+    display: block;
+}
+.myButton2 input + span:before {
+    color: #f6f6f6;
+    content: "Download";
+    font-size: 1.2em;
+    vertical-align: middle;
+    display: inline-block;
+    background: #19589A;
+    height: 30px;
+    width: auto;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 2px;
+    background-clip: padding-box;
+    cursor: pointer;
+    padding: 0 20px;
+}
+.myButton2 input:checked + span:before {
+    display: none;
+}
+.myButton2 input:checked + span span {
     display: block;
 }
