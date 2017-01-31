@@ -1,0 +1,50 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.myButton {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+    min-height: 30px;
+}
+.myButton input {
+    display: none;
+}
+.myButton span span {
+    padding: 50px 20px 0 0;
+    display: none;
+}
+.myButton span span a {
+    display: block;
+}
+.myButton input + span:before {
+    content: "show";
+    font-size: 20px;
+    vertical-align: middle;
+    position: absolute;
+    display: inline-block;
+    background: #666;
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 5px;
+    -moz-background-clip: padding;
+    border-radius: 5px;
+    background-clip: padding-box;
+    border: 1px solid #444;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    padding: 0 20px;
+}
+.myButton input:checked + span:before {
+    content: "ausblenden";
+}
+.myButton input:checked + span span {
+    display: block;
+}
