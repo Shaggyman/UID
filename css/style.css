@@ -79,6 +79,15 @@ h2 {
 .text-box {
 }
 
+#sidebar-fansite {
+    padding: 0.5em 0.5em 0.5em 2em;
+    margin-left: 2em;
+    width: 30em;
+    border-left: black solid 7px;
+    float: right;
+    margin-bottom: 2em;
+}
+
 #sidebar-right {
     padding: 0.5em 0.5em 0.5em 2em;
     margin-left: 2em;

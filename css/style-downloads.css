@@ -1,0 +1,78 @@
+/*Quelle: http://codepen.io/HaukeSchultz/pen/YPwJYJ wurde angepasst*/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.myButton {
+    position: relative;
+    display: inline-block;
+    margin: 1em 0;
+    min-height: 1.5em;
+}
+.myButton input {
+    display: none;
+}
+.myButton span span {
+    padding: 1em 0;
+    display: none;
+}
+.myButton input + span:before {
+    color: #f6f6f6;
+    content: "Vorschau";
+    font-size: 1.2em;
+    vertical-align: middle;
+    display: inline-block;
+    background: #19589A;
+    height: 1.5em;
+    width: auto;
+    line-height: 1.5em;
+    text-align: center;
+    border-radius: 2px;
+    background-clip: padding-box;
+    cursor: pointer;
+    padding: 0 20px;
+}
+.myButton input:checked + span:before {
+    content: "Ausblenden";
+}
+.myButton input:checked + span span {
+    display: block;
+}
+
+
+.myButton2 {
+    position: relative;
+    display: inline-block;
+    margin: 1em 0;
+    min-height: 1.5em;
+}
+.myButton2 input {
+    display: none;
+}
+.myButton2 span span {
+    display: none;
+}
+.myButton2 input + span:before {
+    color: #f6f6f6;
+    content: "Download";
+    font-size: 1.2em;
+    vertical-align: middle;
+    display: inline-block;
+    background: #19589A;
+    height: 1.5em;
+    width: auto;
+    line-height: 1.5em;
+    text-align: center;
+    border-radius: 2px;
+    background-clip: padding-box;
+    cursor: pointer;
+    padding: 0 1em;
+}
+.myButton2 input:checked + span:before {
+    display: none;
+}
+.myButton2 input:checked + span span {
+    display: block;
+}
