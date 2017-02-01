@@ -77,6 +77,9 @@ h2 {
 /*INDEX*/
 
 .text-box {
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
 }
 
 #sidebar-fansite {
@@ -89,7 +92,7 @@ h2 {
 }
 
 #sidebar-right {
-    padding: 0.5em 0.5em 0.5em 2em;
+    padding: 0.5em 3em 0.5em 2em;
     margin-left: 2em;
     width: 15em;
     border-left: black solid 7px;
@@ -98,7 +101,7 @@ h2 {
 }
 
 #group {
-    width: 45%;
+    width: 35%;
     max-height: 30%;
 }
 
