@@ -76,7 +76,7 @@ h2 {
 
 /*INDEX*/
 
-.text-box {
+.text-box-index {
     padding-left: 3em;
     padding-right: 3em;
     padding-bottom: 3em;
@@ -116,10 +116,15 @@ div#textwrapper {
     padding-right: 3em;
 }
 
+div#textwrapper2 {
+    margin-left: 16em;
+    padding-right: 3em;
+    text-align: center;
+}
+
 .sidebar {
     color: black;
     position: fixed;
-    float: left;
 }
 
 .center {
@@ -132,14 +137,32 @@ div#textwrapper {
     float: left;
 }
 
+.text-box {
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-bottom: 3em;
+}
+
+#sidebar-history {
+    float: right;
+}
+
 .arrow-bar {
     list-style: none;
 }
 
 .years {
     text-align: center;
-    font-size: 5em;
+    font-size: 7em;
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
 }
+
+.images {
+    width:80%;
+    height: 100%;
+}
+
 
 /* DOWNLOADS*/
 
