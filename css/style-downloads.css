@@ -35,7 +35,7 @@
     border-radius: 2px;
     background-clip: padding-box;
     cursor: pointer;
-    padding: 0 20px;
+    padding: 0 1em;
     font-family: "Courier New", serif;
     border: 2px solid #063260;
 }
@@ -55,7 +55,6 @@
 .myButton input:active + span:before {
     background: #063260;
 }
-
 
 .myButton2 {
     position: relative;

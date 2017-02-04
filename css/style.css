@@ -159,16 +159,14 @@ div#textwrapper2 {
 }
 
 .images {
-    width:80%;
+    width: 80%;
     height: 100%;
 }
 
-
-/* DOWNLOADS*/
-
+/*DOWNLOADS*/
 /*IMPRESSUM*/
 
-.impressum {
+.text-wrapper3 {
     padding-left: 2em;
     padding-bottom: 1.5em;
     Padding-right: 2em;
@@ -188,17 +186,13 @@ footer {
     margin-right: 9%;
 }
 
-figcaption {
-    display: block;
-}
-
 #to-top {
     font-size: 4em;
     float: left;
     padding-left: 2em;
 }
 
-/*STUFF*/
+/*LINKS*/
 
 .selected {
     color: #f6f6f6;
