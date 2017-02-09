@@ -350,6 +350,49 @@ Durch das Feedback unserer Präsentation und der durchgeführten heuristischen E
 \item Überprüfung der Funktionalitäten + Szenarios
 \end{enumerate}
 \section*{Aufgabe 8: Prüfung der Barrierefreiheit}
+Das Ergebnis des Barrierefreiheit Tests fiel mit 90,5 von 100 erreichbaren Punkten im allgemeinen gut aus . Ein paar vereinzelte Mängel konnten allerdings festgestellt werden.
+
+\subsection{Festgestellte Mängel mit Lösungsvorschlägen}
+\begin{itemize}
+
+\item[1.]Für denn Fall, dass der Nutzer aus irgendeinem Grund keine Maus zur Verfügung hat und die Webseite besucht, besteht die Möglichkeit sich mit Hilfe der Tabulator Taste durch die Seite zu navigieren. Auf der Download Unterseite konnte festgestellt werden, dass ohne Maus keine Downloads ausgeführt werden können und auch keine Vorschläge angezeigt werden können.
+
+\textbf{Lösungsvorschlag:} Download (zusätzlich) über klassischen "href"-Link im text ermöglichen, sieht dann jedoch nicht mehr so schön aus wie (nur) ein Button.
+
+\item[2.]Der Lange Text auf der Regelseite muss noch besser gegliedert und strukturiert werden. Die Textabschnitte sind zu lang und nehmen dem Besucher die Möglichkeit wichtige Informationen auf einen Blick zu erkennen.
+
+\textbf{Lösungsvorschlag:} Zur besseren Gliederung können Teillisten eingesetzt werden. Teilweise müssen missverständliche Textpassagen umformuliert, gekürzt oder ergänzt werden. Wichtige Wörter die im Bewusstsein des Besuchers sofortige Assoziationen hervorrufen ("Triggern") können \textbf{fett} und/oder \textit{kursiv} hervorgehoben werden um die Aufmerksamkeit des Besuchers schnell auf den entsprechenden Abschnitt zu lenken. Auch zusammengehörigen Textblöcken kann durch das Einfügen von Absätzen eine bessere Lesbarkeit verliehen werden.
+
+\item[3.]Interaktive Felder, wie das Formular zur Einreichung von Regel Vorschlägen oder die Download bzw. Vorschau Buttons sollten bei nicht korrekter Verwendung entsprechende Fehlermeldungen liefern.
+
+\textbf{Lösungsvorschlag:} Eine Fallunterscheidung ist mit reinem HTML/CSS auf die klassische Art nicht möglich. Deshalb konnten entsprechende Fehlermeldungen hier nicht umgesetzt werden.
+
+\item[4.] Bei starkem Zoom (200\%) überlagern sich die weißen Markierungen in der vertikalen Hauptnavigation etwas, sind aber dennoch voll funktionsfähig. 
+
+\textbf{Lösungsvorschlag:}Das Problem sollte mit vollständig "response-aktiv" umgesetztem HTML/CSS behoben werden können.
+
+\item[5.]Durch Copy/Paste haben einige Bilder keine sinnvollen Alternativtexte.
+
+\textbf{Lösungsvorschlag:} Kann sehr leicht geändert werden.
+
+\item[6.] Bei fehlerhaften Eingaben von Seiten des Besuchers z.B. im Formular für die Regel Vorschläge gibt es keine implementierte Möglichkeit diese rückgängig zu machen. Allerdings ist es in jedem Zustand möglich die Seite neu zu laden.
+
+\textbf{Lösungsvorschlag:} Es könnte ein \textit{Reset-Button} eingefügt werden. 
+
+\subsection{Sonstiges}
+
+Der Kontrasttest lieferte folgendes Ergebnis:
+
+\includegraphics[width=300px, height=150px]{contrast.png}
+
+Für Lesbarkeit und Orientierung ist der farblicher Kontrast ausreichend.
+
+
+
+\end{itemize}
+
+
+
 \section*{Aufgabe 9: Nutzertest}
 \section*{Aufgabe 10: Projektabschluss}
  Halten Sie alles, was Sie darüber hinaus noch ändern im Abschlusskommentar fest. Geben Sie
