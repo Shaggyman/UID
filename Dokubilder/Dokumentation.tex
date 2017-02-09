@@ -16,6 +16,9 @@
 \usepackage{float}
 \usepackage{smartdiagram}
 \usepackage[automark]{scrpage2}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\usepgfplotslibrary{statistics}
  
 \newcommand{\BMM}{\texttt{\textit{Bodensee Mau Mau}}}
  
@@ -341,35 +344,48 @@ Durch das Feedback unserer Präsentation und der durchgeführten heuristischen E
 \item Nach jedem Download erscheint eine Rückmeldung in Form eines Satzes, wie z. B. "Der Download der Datei [\textit{xy}] war erfolgreich.".
 \item Damit es eine Möglichkeit zur Interaktion zwischen Besuchern und der Webseite gibt, wird noch eine \textit{Fan}-Seite hinzugefügt. Auf dieser können Vorschläge und Ideen für eigene Spielvarianten über ein Formular eingereicht werden und Bilder vom Spielen (die zuvor per E-Mail geschickt wurden) angeschaut werden.
 \item Für nicht-digitale Werbung wird es noch die Möglichkeit geben, einen Flyer herunterzuladen.
+\item Die Möglichkeit die Sprache zu ändern, kommt wegen des zu hohen Aufwands noch nicht mit rein. Wir merken es uns aber für den Ausblick in \textbf{Aufgabe 10}.
 \end{itemize}
 
 \section*{Aufgabe 7: Umsetzung des Projekts}
 \subsection*{b) Erste Version der Webseite}
 \begin{enumerate}
 \item Entwicklung der Website
+
+Neues Zeug (was während dem coden dazu kam): Sprung zum Seitenanfang, Vorschau bei Downloads, anderes Logo als im Papierprototypen
+
+Bilderanleitung
 \item Überprüfung der Funktionalitäten + Szenarios
+Funktionalitäten: alle Links wurden Überprüft, sowie der Code geordnet und mit IntelliJ IDEA 2016.2.4 überprüft. 
+%\begin{figure}[H]
+% \centering
+%   \includegraphics[width=0.7\textwidth]{Szenario1.png}
+%\caption{Szenario 1, Schritt 1}
+%\end{figure}
+
 \end{enumerate}
 \section*{Aufgabe 8: Prüfung der Barrierefreiheit}
-Das Ergebnis des Barrierefreiheit Tests fiel mit 90,5 von 100 erreichbaren Punkten im allgemeinen gut aus . Ein paar vereinzelte Mängel konnten allerdings festgestellt werden.
+Für den Test auf Barrierefreiheit wurde \textbf{WebsiteV1} verwendet.
+Das Ergebnis des Barrierefreiheit Tests fiel mit 90,5 von 100 erreichbaren Punkten im allgemeinen gut aus. Ein paar vereinzelte Mängel konnten allerdings festgestellt werden. Der volle Bericht ist in \textbf{BITV-Test.zip} zu finden.
 
-\subsection{Festgestellte Mängel mit Lösungsvorschlägen}
+\subsection*{Festgestellte Mängel mit Lösungsvorschlägen}
 \begin{itemize}
 
 \item[1.]Für denn Fall, dass der Nutzer aus irgendeinem Grund keine Maus zur Verfügung hat und die Webseite besucht, besteht die Möglichkeit sich mit Hilfe der Tabulator Taste durch die Seite zu navigieren. Auf der Download Unterseite konnte festgestellt werden, dass ohne Maus keine Downloads ausgeführt werden können und auch keine Vorschläge angezeigt werden können.
 
-\textbf{Lösungsvorschlag:} Download (zusätzlich) über klassischen "href"-Link im text ermöglichen, sieht dann jedoch nicht mehr so schön aus wie (nur) ein Button.
+\textbf{Lösungsvorschlag:} Download (zusätzlich) über klassischen "href"\ -Link im Text ermöglichen, sieht dann jedoch nicht mehr so schön aus wie (nur) ein Button.
 
 \item[2.]Der Lange Text auf der Regelseite muss noch besser gegliedert und strukturiert werden. Die Textabschnitte sind zu lang und nehmen dem Besucher die Möglichkeit wichtige Informationen auf einen Blick zu erkennen.
 
 \textbf{Lösungsvorschlag:} Zur besseren Gliederung können Teillisten eingesetzt werden. Teilweise müssen missverständliche Textpassagen umformuliert, gekürzt oder ergänzt werden. Wichtige Wörter die im Bewusstsein des Besuchers sofortige Assoziationen hervorrufen ("Triggern") können \textbf{fett} und/oder \textit{kursiv} hervorgehoben werden um die Aufmerksamkeit des Besuchers schnell auf den entsprechenden Abschnitt zu lenken. Auch zusammengehörigen Textblöcken kann durch das Einfügen von Absätzen eine bessere Lesbarkeit verliehen werden.
 
-\item[3.]Interaktive Felder, wie das Formular zur Einreichung von Regel Vorschlägen oder die Download bzw. Vorschau Buttons sollten bei nicht korrekter Verwendung entsprechende Fehlermeldungen liefern.
+\item[3.]Interaktive Felder, wie das Formular zur Einreichung von Regelvorschlägen oder die Download bzw. Vorschau-Buttons sollten bei nicht korrekter Verwendung entsprechende Fehlermeldungen liefern.
 
 \textbf{Lösungsvorschlag:} Eine Fallunterscheidung ist mit reinem HTML/CSS auf die klassische Art nicht möglich. Deshalb konnten entsprechende Fehlermeldungen hier nicht umgesetzt werden.
 
 \item[4.] Bei starkem Zoom (200\%) überlagern sich die weißen Markierungen in der vertikalen Hauptnavigation etwas, sind aber dennoch voll funktionsfähig. 
 
-\textbf{Lösungsvorschlag:}Das Problem sollte mit vollständig "response-aktiv" umgesetztem HTML/CSS behoben werden können.
+\textbf{Lösungsvorschlag:}Das Problem sollte mit vollständig "response-aktiv"\ umgesetztem HTML/CSS behoben werden können.
 
 \item[5.]Durch Copy/Paste haben einige Bilder keine sinnvollen Alternativtexte.
 
@@ -378,29 +394,190 @@ Das Ergebnis des Barrierefreiheit Tests fiel mit 90,5 von 100 erreichbaren Punkt
 \item[6.] Bei fehlerhaften Eingaben von Seiten des Besuchers z.B. im Formular für die Regel Vorschläge gibt es keine implementierte Möglichkeit diese rückgängig zu machen. Allerdings ist es in jedem Zustand möglich die Seite neu zu laden.
 
 \textbf{Lösungsvorschlag:} Es könnte ein \textit{Reset-Button} eingefügt werden. 
-
-\subsection{Sonstiges}
+\end{itemize}
+\subsection*{Kontrasttest}
 
 Der Kontrasttest lieferte folgendes Ergebnis:
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=300px, height=150px]{contrast.png}
+\caption{Kontrastteset}
+\end{figure}
 
-\includegraphics[width=300px, height=150px]{contrast.png}
 
 Für Lesbarkeit und Orientierung ist der farblicher Kontrast ausreichend.
 
 
 
-\end{itemize}
-
-
-
 \section*{Aufgabe 9: Nutzertest}
+Für den Nutzertest wurde \textbf{WebsiteV2} verwendet, bei der die Alternativtexte der Bilder auf der Seite \textit{Regeln} geändert wurden, so dass sie jetzt Sinn ergeben.
+
+\begin{enumerate}
+\item Wir haben uns die Fragestellung \textbf{"Wie kommen Erstnutzer mit der Seite zurecht?"} überlegt und wollten dabei testen, ob Szenario 2 (die Suche einer speziellen Regel) und Szenario 3 (aktuellste News abrufen) bewältigt werden können.
+\item Wir haben ein Skript vorbereitet, das wir nach einem Pilottest leicht angepasst haben (nach Task 6 dürfen die Probanden noch die Webseite frei durchschauen). In \textbf{Abbildung 1} sieht man den Testraum.
+\begin{description}
+\item[Raum vorbereiten:]
+Maus bereitstellen, Website öffnen, Aufnahmemodus (Win+G), restlichen Programme schließen
+\item[Nutzer einweisen:]
+Begrüßung und allgemeine Einweisung:
+\begin{itemize}
+\item Es geht um Website für ein Kartenspiel, mehr erfährst du während des Tests, bei dem ich dir Fragen/Aufgaben stellen werde, die du ausführen sollst und du sollst dabei alles laut aussprechen, was du denkst (Thinking Aloud)
+\item Es geht darum die Website auf Probleme/Optimierungsmöglichkeiten zu prüfen und nicht darum den Tester zu prüfen, deswegen alles ohne Rücksicht sagen
+\item Wir nehmen deinen Bildschirm auf (also die Mausbewegungen) und unser Gespräch (Audio), ist das okay?
+\item Du darfst während des Tests Fragen stellen, aber es kann sein, dass ich sie nicht beantworten werde
+\item Jetzt hast du nochmal die Möglichkeit Fragen zu stellen, bevor der Test beginnt
+\end{itemize}
+\textbf{Aufnahme starten}
+  
+\item[Aufgaben/Fragen stellen:]\ 
+\begin{description}
+\item[Task 1] Verschaff dir einen Überblick auf der Startseite, wenn du fertig bist, fangen wir an.
+\item[Task 2] Finde die Regel zu der Spielkarte "Dame".
+\item[Task 3] Lade einen Flyer herunter.
+\item[Task 4] Was wurde als neustes auf der Website hinzugefügt?
+\item[Task 5] Schreibe uns eine E-Mail.
+\item[Task 6] Wie heißen die Gründer des Spiels?
+\end{description}
+Der Test ist zu Ende, jetzt darfst du selbständig schauen, ob du noch was findest.
+\item[Ende:] Für die Teilnahme bedanken, Aufnahme beenden.
+\end{description} 
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=0.7\textwidth]{nutzertest.jpg}
+\caption{Raumvorbereitung für den Nutzertest}
+\end{figure}
+\item Wir haben 6 Probanden gefunden, inklusive Pilottest. Wir haben eigentlich keinen Protokollanten benötigt, da wir den Bildschirm und das Gespräch aufgenommen haben. Nur nachdem wir alle Tasks durchgeführt hatten, haben wir die vorgeschlagenen Verbesserungen der Probanden aufgeschrieben (als Anhang in \textbf{Protokoll.pdf}).
+\item Für die Auswertung haben wir die Screenvideos nacheinander evaluiert und dabei die benötigte Bearbeitungszeit notiert, sowie alle Verbesserungsmöglichkeiten, die uns dabei aufgefallen sind.
+\begin{description}
+\item[Task 1] \textbf{Verschaff dir einen Überblick auf der Startseite. }\\
+Das war keine wirkliche Aufgabe, wir wollten nur sicherstellen, dass die Probanden sich selbst einen Überblick nur mit der Startseite verschaffen, wie ein Erstnutzer es auch machen würde.
+\item[Task 2] \textbf{Finde die Regel zu der Spielkarte Dame. }\\
+Für diese Aufgabe kamen teilweise die längste Bearbeitungszeiten heraus (siehe Boxplot). Diese Aufgabe testet das Szenario 2.
+\item[Task 3] \textbf{Lade einen Flyer herunter.} \\
+Hier kamen kaum Anmerkungen zustande und es ging bei allen schnell und intuitiv.
+\item[Task 4] \textbf{Was wurde als neustes auf der Website hinzugefügt?}\\ Das ging bei fast allen sehr schnell. Diese Aufgabe testet das Szenario 3.
+\item[Task 5] \textbf{Schreibe uns eine E-Mail.}\\
+Hier haben wir jede gefundene E-Mail-Adresse gelten lassen. Es wurden 3 verschiedene gefunden.
+\item[Task 6] \textbf{Wie heißen die Gründer des Spiels?}\\
+Das ging auch sehr schnell, manche haben diese Aufgabe über die Startseite und manche über die \textit{Geschichte}-Seite gelöst.
+\end{description}
+
+\subsection*{Themenblöcke:}
+Prioritätenskala: 1 - 7 \\
+sehr hohe Priorität = 1 und keine Priorität = 7
+\begin{description}
+\item[1. Eindeutigkeit] \
+\begin{enumerate} 
+\item Kontakt in Impressum zu finden nicht offensichtlich [6]
+\item im Impressum sind zwei verschiedene E-Mail-Adressen und in Fanbereich eine dritte [2]
+\item "Bedeutung der Karten"\ in "Kartenregeln"\ umbennen [3]
+\end{enumerate}
+\item[2. Entspricht nicht der Logik des Probanden] \
+\begin{enumerate} 
+\item das Wort Impressum war einem Probanden nicht bekannt [7]
+\item Pfeil auf \textit{Geschichte}-Seite falschrum in der Logik eines Probanden [7]
+\end{enumerate}
+\item[3. Usability-Verbesserungsmöglichkeiten] \
+\begin{enumerate}
+\item Suchfeld in der linken Navigation auf der \textit{Regeln}-Seite [3]
+\item Schlagwörter in den Regeln (manche Wörter hervorheben, um es übersichtlicher zumachen) [2]
+\item Schrift leicht zu dünn in der Navigation [5]
+\item Regeln haben viel Text [6]
+\item Startseite, der Infotext ist nicht aussagekräftig genug [2]
+\item Direkt Drucken - Button bei \textit{Downloads} [7]
+\end{enumerate}
+\item[4. Ausblick (große Verbesserungsmöglichkeiten)] \
+\begin{enumerate}
+\item Navigation mit 3 Strichen (mobile Version) [7]
+\item Kartenbeispiele auf der \textit{Regeln}-Seite visuell darstellen [7]
+\item Online spielen (gegen z. B. Computer, aber auch gegen andere Spieler) [7]
+\end{enumerate}
+\end{description}
+\subsection*{Lösungen}
+\begin{description}
+\item[1b)] Alle E-Mail-Adressen wurden zu einer E-Mail-Adresse geändert und es gibt nur noch einen Kontakt-Bereich im Impressum.
+\item[1c)] Der Titel "Bedeutung der Karten" wurde in "Kartenregeln" geändert.
+\item[3a)] Ein Suchfeld kann noch in die linke Navigation auf der \textit{Regeln}-Seite hinzugefügt werden, doch leider erst mit JavaScript, was wir nicht verwenden dürfen, von daher lassen wir es lieber komplett draußen, damit wir nicht ein nicht-funktionierendes Suchfeld implementieren.
+\item[3b)] Es wurde versucht den Regeln-Text durch kürzen und durch Hervorhebungen zu verbessern.
+\item[3e)] Der Infotext auf der Startseite wurde auch angepasst.
+\end{description}
+\end{enumerate}
+\subsection*{Bewertungsbericht}
+Der Nutzertest lief im allgemeinen gut. Die Bearbeitungszeiten sind recht kurz gewesen, wie in den Boxplots erkennbar: \\ \\
+\begin{tikzpicture}
+  \begin{axis}
+    [
+    xlabel={Bearbeitungsdauer [in s]},
+    ytick={1,2,3,4,5,6},
+    yticklabels={Task 1, Task 2, Task 3, Task 4, Task 5, Task 6},
+    ]
+    \addplot+[
+    boxplot prepared={
+      median=57,
+      upper quartile=45.5,
+      lower quartile=64.75,
+      upper whisker=70,
+      lower whisker=23
+    },
+    ] coordinates {};
+    \addplot+[
+    boxplot prepared={
+      median=35.5,
+      upper quartile=66.25,
+      lower quartile=14,
+      upper whisker=67,
+      lower whisker=14
+    },
+    ] coordinates {};
+    \addplot+[
+    boxplot prepared={
+      median=9.5,
+      upper quartile=11,
+      lower quartile=7.5,
+      upper whisker=14,
+      lower whisker=6
+    },
+    ] coordinates {};
+    \addplot+[
+    boxplot prepared={
+      median=14.5,
+      upper quartile=23.75,
+      lower quartile=9.5,
+      upper whisker=29,
+      lower whisker=5
+    },
+    ] coordinates {};
+    \addplot+[
+    boxplot prepared={
+      median=15.5,
+      upper quartile=22.25,
+      lower quartile=9.5,
+      upper whisker=23,
+      lower whisker=2
+    },
+    ] coordinates {};
+    \addplot+[
+    boxplot prepared={
+      median=10,
+      upper quartile=3.75,
+      lower quartile=13.5,
+      upper whisker=18,
+      lower whisker=3
+    },
+    ] coordinates {};
+  \end{axis}
+\end{tikzpicture}
+\\
+Da der erste Task keine richtige Aufgabe war, fällt eigentlich nur Task 2 aus dem Rahmen, vorallem auch aus der erwareteten Bearbeitungszeit. Die einfache Aufgabe, die Regel zur Spielkarte "Dame"\ zu finden, wurde für manche schwerer als erwartet, bzw. hat länger gedauert als erwartet. Dies soll durch die Lösungen zu den Problemen \textbf{1a)}, \textbf{3a)} und \textbf{3b)} behoben werden. \\
+Gravierende Probleme wurden nicht gefunden, nur Optimierungsmöglichkeiten und kleine Uneindeutigkeiten. Alles in allem sind wir zufrieden, wie die Probanden sich auf der Webseite zurecht gefunden haben. Gelobt wurde, dass alles Wichtige da sei, das Logo kreativ sei und auch die \textit{Geschichte}-Seite schön sei, sowie der \textit{Über uns} - Bereich, der die Seite "weniger anonym, dafür persönlicher"\ machen würde.
 \section*{Aufgabe 10: Projektabschluss}
  Halten Sie alles, was Sie darüber hinaus noch ändern im Abschlusskommentar fest. Geben Sie
 an dieser Stelle einen kurzen Ausblick, welche Erweiterungsmöglichkeiten / Verbesserungen in
 der Zukunft noch umgesetzt werden könnten. Begründen Sie, warum Ihre Webseite eine gute
 Implementation Ihrer Projektidee ist.
  \subsection*{Ausblick} 
- Mobilversion, Design nochmal ordentlich überarbeiten?, Texte aktualisieren, Genderneutral umschreiben, Fremdsprachen hinzufügen
+ Mobilversion, Design nochmal ordentlich überarbeiten?, Texte aktualisieren, Genderneutral umschreiben, Fremdsprachen hinzufügen,
+ Fanstore, Onlineversion gegen PC und echte Spieler, Suchfeld in Regeln, mehr Icons für die Regeln, Bilder die Spiel erklären, Videos die Spiel erklären
  \subsection*{Fehlende Umsetzung}
 
 
