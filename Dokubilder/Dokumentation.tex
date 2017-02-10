@@ -19,6 +19,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.8}
 \usepgfplotslibrary{statistics}
+\usepackage{hyperref}
  
 \newcommand{\BMM}{\texttt{\textit{Bodensee Mau Mau}}}
  
@@ -350,12 +351,83 @@ Durch das Feedback unserer Präsentation und der durchgeführten heuristischen E
 \section*{Aufgabe 7: Umsetzung des Projekts}
 \subsection*{b) Erste Version der Webseite}
 \begin{enumerate}
-\item Entwicklung der Website
+\item \textbf{Entwicklung der Website}\\
+\begin{description}
+\item[Startseite] \ \\
+Die Entwicklung der Startseite als Bildershow. Man erkennt wie sich erst das Design, dann der Grundaufbau und dann immer mehr Kleinigkeiten geändert haben.
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=0.7\textwidth]{alt1.png}
+\caption{Grundgerüst}
+\end{figure}
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=0.7\textwidth]{alt2.png}
+\caption{Farbänderungen + Idee den Header mit selbst aufgenommenen Foto vom Bodensee zu bestücken}
+\end{figure}
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=0.7\textwidth]{index.png}
+\caption{Entwurf mit ursprünglichen Call-To-Action + Farbänderung}
+\end{figure}
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=0.7\textwidth]{index2.png}
+\caption{Call-To-Action wurde verworfen + News hinzugefügt}
+\end{figure}
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=0.7\textwidth]{index3.png}
+\caption{News angepasst + Über uns hinzugefügt}
+\end{figure}
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=0.7\textwidth]{index4.png}
+\caption{Endprodukt (WebsiteV1)}
+\end{figure}
 
-Neues Zeug (was während dem coden dazu kam): Sprung zum Seitenanfang, Vorschau bei Downloads, anderes Logo als im Papierprototypen
+\item[Regeln]
 
-Bilderanleitung
-\item Überprüfung der Funktionalitäten + Szenarios
+\item[Geschichte] Hier haben wir uns recht nah an der Vorlage des Papierprototypen gehalten. \\
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=0.7\textwidth]{geschichte.png}
+\caption{\textit{Geschichte}-Seite mit altem Design}
+\end{figure}
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=0.7\textwidth]{geschichte2.png}
+\caption{Jahre geändert}
+\end{figure}
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=0.7\textwidth]{geschichte3.png}
+\caption{Navigation links + Zentrieren + Designänderung}
+\end{figure}
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=0.7\textwidth]{geschichte4.png}
+\caption{Endprodukt (WebsiteV1)}
+\end{figure}
+\item[Fanbereich] Währemd der Entwicklung haben wir uns eine Funktion für diese Seite überlegt und einen Namen. Anfangs stand Fanstuff im Raum, den wir bis kurz vor Schluss beibehalten haben. Wir haebn ihn geändert, da Fanstuff leicht verwirrend sein könnte: 1. weil es ein englisches Wort ist und 2. weil man dahinter auch einen Fanstore vermuten könnte. Wir haben noch eine zweite Fansite.html erstellt, die das Abschicken des Formulars simluiert.
+\item[Downloads]
+Während der Entwicklung ist uns die Idee gekommen, noch einen Vorschaubutton mit einzufügen. Dies haben wir auch gemacht und er ist voll funktionstüchtig, nur mit HTML und CSS (und einem Adobe Reader Plugin beim Nutzer).
+\item[Impressum] Wir haben hier einen automatisch generierten Text genommen und auch alle Seiten verlinkt, von denen wir Material verwendet haben. Uns ist beim Webseiteerstellen noch aufgefallen, das eine Kontaktseite fehlt. Unser Kompromiss statt einer zusätzlichen Seite war, dass wir es ins Impressum verlagert haben.
+\item[PDF-Dateien (Downloadmaterial)]
+
+\item[Sonstiges]
+Wir haben das Logo noch mal geändert, von dem vorläufigen des Papierprototyps, zu einer einzelnen Karte auf der "Mau"\ zu lesen ist. \\
+Zusätzlich ist uns noch aufgefallen, das ein Button: Sprung zum Seitenanfang nützlich sein könnte. Deswegen haben wir noch einen implementiert auf jeder Seite im Footer. Wir haben uns bewusst gegen einen Text unter dem Button entschieden, um es cleaner wirken zu lassen und weil den meisten Personen eh klar sein müssste, was der Button bewirkt. Für den Fall das es doch nicht so klar ist, haben wir noch einen Text hinzugefügt, der zu lesen ist, wenn man mit der Maus über den Button geht: $"$Zum Seitenanfang$"$.
+\end{description} 
+
+\textbf{Externes Material}
+\begin{itemize}
+\item Downloadbuttons von Codepen (Link auch als Kommentar in der CSS-Datei: style-downloads.css, \url{http://codepen.io/HaukeSchultz/pen/YPwJYJ }). Mit diesen Buttons lässt sich wunderbar ein Download simulieren.
+\item Die Socialmediaicons im Footer sind auch auch von der Seite Codepen: \url{http://codepen.io/Deadlymuffin/pen/hGiqo}. Wir wollten Icons die moderner aussehen und einen netten hover-Effekt haben, das haben wir bei dem Template gefunden. Sie sind in der CSS-Datei style2.css zu finden.
+\item Impressumtext von der Seite \url{http://www.impressum-generator.de/}. Wir wollten nicht nur einen Lorem Ipsum Fülltext für diese Seite nehmen, sondern einen relativ echt wirkendes Impressum. Da wir uns rechtlich kaum auskennen, haben wir diesen Generator benutzt.
+\item Favicon von der Seite \url{http://www.fatcow.com/free-icons}. Wir wollten einen Favicon der Spielkarten darstellt, nach längerer Suche haben wir den auf dieser Seite gefunden. Spielkarten passen logischerweise gut zu \BMM .
+\end{itemize}
+\item \textbf{Überprüfung der Funktionalitäten und Szenarios}\\
 Funktionalitäten: alle Links wurden Überprüft, sowie der Code geordnet und mit IntelliJ IDEA 2016.2.4 überprüft. 
 %\begin{figure}[H]
 % \centering
@@ -571,14 +643,54 @@ Der Nutzertest lief im allgemeinen gut. Die Bearbeitungszeiten sind recht kurz g
 Da der erste Task keine richtige Aufgabe war, fällt eigentlich nur Task 2 aus dem Rahmen, vorallem auch aus der erwareteten Bearbeitungszeit. Die einfache Aufgabe, die Regel zur Spielkarte "Dame"\ zu finden, wurde für manche schwerer als erwartet, bzw. hat länger gedauert als erwartet. Dies soll durch die Lösungen zu den Problemen \textbf{1a)}, \textbf{3a)} und \textbf{3b)} behoben werden. \\
 Gravierende Probleme wurden nicht gefunden, nur Optimierungsmöglichkeiten und kleine Uneindeutigkeiten. Alles in allem sind wir zufrieden, wie die Probanden sich auf der Webseite zurecht gefunden haben. Gelobt wurde, dass alles Wichtige da sei, das Logo kreativ sei und auch die \textit{Geschichte}-Seite schön sei, sowie der \textit{Über uns} - Bereich, der die Seite "weniger anonym, dafür persönlicher"\ machen würde.
 \section*{Aufgabe 10: Projektabschluss}
- Halten Sie alles, was Sie darüber hinaus noch ändern im Abschlusskommentar fest. Geben Sie
-an dieser Stelle einen kurzen Ausblick, welche Erweiterungsmöglichkeiten / Verbesserungen in
-der Zukunft noch umgesetzt werden könnten. Begründen Sie, warum Ihre Webseite eine gute
-Implementation Ihrer Projektidee ist.
- \subsection*{Ausblick} 
- Mobilversion, Design nochmal ordentlich überarbeiten?, Texte aktualisieren, Genderneutral umschreiben, Fremdsprachen hinzufügen,
- Fanstore, Onlineversion gegen PC und echte Spieler, Suchfeld in Regeln, mehr Icons für die Regeln, Bilder die Spiel erklären, Videos die Spiel erklären
- \subsection*{Fehlende Umsetzung}
 
+\subsection*{Ablauf}
+Unsere teaminterne Organisation lief über Github und über ein Titanpad ab. Unsere Dateien haben wir über Git ausgetauscht und unsere Aufgabenteilung über Titanpad (siehe Abbildung). Titanpad kann man als realtime-Onlinenotizblockblatt beschreiben, auf das jeder schreiben kann, der den Link hat.
+\begin{figure}[H]
+ \centering
+   \includegraphics[width=0.7\textwidth]{titanpad.png}
+\caption{Screenshot eines Titanpadeintrags}
+\end{figure}\ \\
+Dort haben wir TODO-Listen erstellt, nach Wichtigkeit sortiert und auf uns gleichmäßig verteilt. Wenn etwas fertig war, wurde es durchgestrichen. \\
+Diese Organisation hat größtenteils funktioniert, echte Treffen waren aber auch notwendig, damit man sich immer wieder auf das Ziel einigen konnte.
+
+\subsection*{Entwicklung}
+Zusätzlich zu den schon genannten Änderungen aus dem Barrierefrei-Test und dem Nutzertest, ist uns noch aufgefallen, dass auf der \textit{Download}-Seite nicht explizit genannt wird, was für ein Dateiformat man sich herunterlädt. Das haben wir noch geändert und sogar noch Icons dafür einfügt, die wir von der Seite \url{www.flaticon.com} bezogen haben. Diese haben einen ähnlichen Stil, wie unsere Logoschrift, nämlich leicht verspielt. Wir hoffen, dass der Nutzer nun schnell erkennt, was er sich herunterladen kann.\\
+\\
+Die \textit{Regeln}-Seite wurde auch nochmal komplett überarbeitet.
+... \\
+...\\ \\
+Die Startseite hat einen neuen Infotext gekriegt, der leichter und schneller zu lesen sein.\\ \\
+Das \textit{Impressum} wurde inhaltlich dank des Nutzertests nun klarer getrennt, in Kontakt und Impressum. \\ \\
+Es wurde darauf geachtet, dass der Code gut und sauber lesbar ist. Wir haben die Webseite für Firefox optimiert. Außerdem ist die Webseite schon realtiv skalierbar, was man erkennt, wenn man die Seitengröße ändert.
+
+\subsection*{Gute Implementation}
+ Begründen Sie, warum Ihre Webseite eine gute
+Implementation Ihrer Projektidee ist.
+
+ \subsection*{Fehlende Umsetzung}
+Unsere Webseite hat keine fehlende Umsetzungen. Wir haben einige Sachen dank des Feedbacks nach der Präsentation und der heuristischen Evalutation verworfen. Dafür aber auch neue Dinge, im Vergleich zum Papierprototypen, hinzugefügt. Dank guter Teamarbeit, haben wir alles im zeitlichen Rahmen erledigen können.
+
+ \subsection*{Ausblick} 
+ Das sind alles Ideen, die während der Entwicklung aufkamen, aber zu umständlich für eine jetzige Implementierung waren:
+ \begin{itemize}
+ \item Mobilversion der Website
+\item neue aktuelle News hinzufügen
+\item Texte geschlechtsneutral umschreiben
+\item Fremdsprachen hinzufügen
+\item Suchfeld auf der Seite \textit{Regeln} hinzufügen, damit man leichter ein Keyword finden kann
+\item zusätzliche Icons für die \textit{Regeln}-Seite, damit jede Karten ein Bild hat
+\item Bilder, die das Spiel erklären, statt/zusätzlich zu dem langen Text
+\item Videos, die das Spiel erklären
+\item Fanstore für Fanartikel
+\item Onlineversion zum Spielen des Spiels, gegen PC und/oder echte Gegner
+ \end{itemize}
+
+\subsection*{Arbeitsaufteilung}
+
+Die Arbeitsaufteilung lief sehr fair und gleichmäßig verteilt. Jeder hat an der Webseite gearbeitet und jeder an der Dokumentation. Wir, das heißt Ulli Hagenlocher und Marc Krause (mit ursprünglich Christoph Schröder), sind beide zufrieden mit dem Arbeitseinsatz des jeweils anderen. Schätzungsweise waren wir zu gleichen Teilen am Projekt beteiligt und würden unsere Beiträge daher jeweils auf ca. 50\% schätzen.
+
+\subsection*{Abschlusskommentar}
+Wir persönlich sind sehr zufrieden mit der Umsetzung unserer Projektidee. Das Feedback aus dem Nutzertest hat dies nochmal bestätigt und auch die Freunde, denen wir die Webseite gezeigt haben, waren mit ihr zufrieden.
 
 \end{document}
