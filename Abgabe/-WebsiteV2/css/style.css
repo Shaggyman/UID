@@ -1,0 +1,231 @@
+body {
+    background: #19589A;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+header {
+    background-color: #0E437A;
+    background-size: cover;
+    width: 100%;
+    font-family: 'Indie Flower', cursive;
+    opacity: 0.95;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    color: #5987B7;
+}
+
+div.logo {
+    padding-top: 0.6em;
+    padding-left: 3%;
+    float: left;
+}
+
+img.logo {
+    transform: rotate(-8deg);
+}
+
+a.logo {
+    padding-left: 0.5em;
+    padding-top: 0.3em;
+    font-size: 2em;
+    float: left;
+    color: #f6f6f6;
+    font-family: 'Indie Flower', cursive;
+    overflow: visible;
+}
+
+/*NAVIGATION*/
+
+nav {
+    font-size: 1.3em;
+    margin-top: 0.5em;
+    width: auto;
+    text-align: right;
+    padding-right: 3%;
+}
+
+ul#top {
+    display: block;
+    list-style: none;
+}
+
+.top {
+    display: inline;
+    padding-left: 0.1em;
+}
+
+/*MAIN*/
+main {
+    background-color: #f6f6f6;
+    margin: 5.6em 6em 0;
+    padding: 2em;
+    text-align: left;
+    min-height: 33.5em;
+}
+
+h2 {
+    font-family: 'Indie Flower', cursive;
+    /*font-family: 'Cinzel', serif;*/
+    margin-top: 0;
+    font-size: 2em;
+}
+
+/*INDEX*/
+
+.text-box-index {
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
+}
+
+#sidebar-fansite {
+    padding: 0.5em 0.5em 0.5em 2em;
+    margin-left: 2em;
+    width: 30em;
+    border-left: black solid 7px;
+    float: right;
+    margin-bottom: 2em;
+}
+
+#sidebar-right {
+    padding: 0.5em 3em 0.5em 2em;
+    margin-left: 2em;
+    width: 15em;
+    border-left: black solid 7px;
+    float: right;
+    margin-bottom: 2em;
+}
+
+#group {
+    width: 35%;
+    max-height: 30%;
+}
+
+.square {
+    list-style-type: square;
+}
+
+/*RULES*/
+
+div#textwrapper {
+    margin-left: 16em;
+    padding-right: 3em;
+}
+
+div#textwrapper2 {
+    margin-left: 16em;
+    padding-right: 3em;
+    text-align: center;
+}
+
+.sidebar {
+    color: black;
+    position: fixed;
+}
+
+.center {
+    text-align: center;
+}
+
+/*HISTORY*/
+
+#arrow {
+    float: left;
+}
+
+.text-box {
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-bottom: 3em;
+}
+
+#sidebar-history {
+    float: right;
+}
+
+.arrow-bar {
+    list-style: none;
+}
+
+.years {
+    text-align: center;
+    font-size: 7em;
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+}
+
+.images {
+    width: 80%;
+    height: 100%;
+}
+
+/*DOWNLOADS*/
+/*IMPRESSUM*/
+
+.text-wrapper3 {
+    padding-left: 2em;
+    padding-bottom: 1.5em;
+    Padding-right: 2em;
+}
+
+/*FOOTER*/
+footer {
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    background-color: #063260;
+    padding-bottom: 1.5em;
+    text-align: center;
+}
+
+#logo-footer {
+    float: right;
+    margin-right: 9%;
+}
+
+#to-top {
+    font-size: 4em;
+    float: left;
+    padding-left: 2em;
+}
+
+/*LINKS*/
+
+.selected {
+    color: #f6f6f6;
+    padding: 1.3em 0.3em 1.2em 0.2em;
+    background-color: #376BA1;
+    font-size: 1.2em;
+}
+
+.white {
+    color: #f6f6f6;
+    padding: 0 0.3em 0 0.2em;
+}
+
+a.white:hover {
+    padding-top: 1.7em;
+    padding-bottom: 1.6em;
+    background-color: #5987B7;
+}
+
+.white-bot {
+    color: #f6f6f6;
+}
+
+a.white-bot:hover {
+    color: #376BA1;
+}
+
+a {
+    text-decoration: none;
+    color: #19589A;
+}
+
+a.text:hover {
+    color: #5987B7;
+    text-decoration: underline;
+}

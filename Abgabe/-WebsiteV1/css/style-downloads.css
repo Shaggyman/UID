@@ -1,0 +1,107 @@
+/*Quelle: http://codepen.io/HaukeSchultz/pen/YPwJYJ wurde angepasst*/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.myButton {
+    position: relative;
+    display: inline-block;
+    margin: 1em 0;
+    min-height: 1.5em;
+}
+
+.myButton input {
+    display: none;
+}
+
+.myButton span span {
+    padding: 1em 0;
+    display: none;
+}
+
+.myButton input + span:before {
+    color: #f6f6f6;
+    content: "VORSCHAU";
+    font-size: 1.2em;
+    vertical-align: middle;
+    display: inline-block;
+    background: #19589A;
+    height: 1.5em;
+    width: auto;
+    line-height: 1.5em;
+    text-align: center;
+    border-radius: 2px;
+    background-clip: padding-box;
+    cursor: pointer;
+    padding: 0 1em;
+    font-family: "Courier New", serif;
+    border: 2px solid #063260;
+}
+
+.myButton input:checked + span:before {
+    content: "AUSBLENDEN";
+}
+
+.myButton input:checked + span span {
+    display: block;
+}
+
+.myButton input:hover + span:before {
+    background: #5987B7;
+}
+
+.myButton input:active + span:before {
+    background: #063260;
+}
+
+.myButton2 {
+    position: relative;
+    display: inline-block;
+    margin: 1em 0;
+    min-height: 1.5em;
+}
+
+.myButton2 input {
+    display: none;
+}
+
+.myButton2 span span {
+    display: none;
+}
+
+.myButton2 input + span:before {
+    color: #f6f6f6;
+    content: "DOWNLOAD";
+    font-size: 1.2em;
+    vertical-align: middle;
+    display: inline-block;
+    background: #19589A;
+    height: 1.5em;
+    width: auto;
+    line-height: 1.5em;
+    text-align: center;
+    border-radius: 2px;
+    background-clip: padding-box;
+    cursor: pointer;
+    padding: 0 1em;
+    font-family: "Courier New", serif;
+    border: 2px solid #063260;
+}
+
+.myButton2 input:checked + span:before {
+    display: none;
+}
+
+.myButton2 input:checked + span span {
+    display: block;
+}
+
+.myButton2 input:hover + span:before {
+    background: #5987B7;
+}
+
+.myButton2 input:active + span:before {
+    background: #063260;
+}
